@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/Button';
 import TextField from 'material-ui/TextField';
 import Grid from 'material-ui/Grid';
@@ -24,7 +22,6 @@ import Dialog, {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  withMobileDialog,
 } from 'material-ui/Dialog';
 
 const styles = ({
@@ -163,7 +160,6 @@ class AddPlaceForm extends React.Component {
 
 
   onSuggestSelect = (suggest) => {
-	console.log(suggest)
 	if (!suggest) return;
 
 	const { gmaps = {} } = suggest;
