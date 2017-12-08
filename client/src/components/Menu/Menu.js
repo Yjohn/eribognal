@@ -20,7 +20,7 @@ function Menu(props) {
                         <Toolbar>
                             <Link style={{color: 'white', marginRight : 15, marginTop: 4}} to="/"><MenuIcon /></Link>
                             <Typography type="title" className={classes.appBarTitle}>
-                              Food Map - Kinning Park Complex
+                              Food Map  
                             </Typography>
                             <SvgIcon fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
