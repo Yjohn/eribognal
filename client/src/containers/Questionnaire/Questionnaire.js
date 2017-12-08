@@ -40,7 +40,7 @@ class Questions extends React.Component {
     }
 
     showQuestions = (response) => {
-        setTimeout(() => {this.setState({isLoading: false})}, 3000)
+        setTimeout(() => { this.setState({ isLoading: false }) }, 3000)
         this.setState({
             questions: response.data
         })
@@ -71,10 +71,13 @@ class Questions extends React.Component {
         apiClient.saveAnswer({
             answers: this.state.questions
         })
-        .then(() => {
-            setTimeout(() => { this.setState({ isLoading: false }) }, 3000)
-            this.props.history.push("/")
-        })
+            .then(() => {
+                setTimeout(() => {
+                    this.setState({ isLoading: false })
+                    this.props.history.push("/")
+                }, 3000)
+
+            })
     }
 
     render() {
