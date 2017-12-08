@@ -40,11 +40,12 @@ class Questions extends React.Component {
     }
 
     showQuestions = (response) => {
-        setTimeout(() => { this.setState({ isLoading: false }) }, 3000)
-        this.setState({
-            questions: response.data
-        })
-
+        setTimeout(() => {
+            this.setState({
+                isLoading: false,
+                questions: response.data
+            })
+        }, 3000)
     }
     onSelect = (question, event) => {
         const value = event.target.value;
