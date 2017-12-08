@@ -32,9 +32,9 @@ const styles = ({
 	paperX: {
 		backgroundColor: '#ffeaea'
 	},
-	customWidth: {
-        width: 150,
-        paddingLeft: 150,
+	categoryList: {
+		width: '100%',
+        paddingLeft: 100,
     },
 	formStyle: {
 		display: 'flex',
@@ -200,7 +200,7 @@ class AddPlaceForm extends React.Component {
 						<Grid item xs={12} md={6}>
 							<FormControl required className={classes.formControl}>
 								<InputLabel htmlFor="Select Category">Select Category</InputLabel>
-								<Select style={styles.customWidth}
+								<Select style={styles.categoryList}
 									value={this.state.selectedCategory} 
 									onChange={(event) => this._handleChange(event, "selectedCategory")}>
 									<MenuItem value="Growing Project">Growing Project</MenuItem>
