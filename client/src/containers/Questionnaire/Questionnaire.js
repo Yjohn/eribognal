@@ -72,11 +72,8 @@ class Questions extends React.Component {
             answers: this.state.questions
         })
             .then(() => {
-                setTimeout(() => {
-                    this.setState({ isLoading: false })
-                    this.props.history.push("/")
-                }, 3000)
-
+                setTimeout(() => { this.setState({ isLoading: false }) }, 3000)
+                this.props.history.push("/")
             })
     }
 
