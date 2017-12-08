@@ -32,11 +32,15 @@ class Questions extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({
+            isLoading: true
+        })
         apiClient.getQuestions()
             .then(this.showQuestions);
     }
 
     showQuestions = (response) => {
+        setTimeout(() => {this.setState({isLoading: false})}, 3000)
         this.setState({
             questions: response.data
         })
