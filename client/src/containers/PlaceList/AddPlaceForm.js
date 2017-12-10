@@ -86,7 +86,7 @@ class AddPlaceForm extends React.Component {
 			category: this.state.selectedCategory,
 		}, this.state.file)
 			.then((response) => {
-				setTimeout(() => { this.setState({ isLoading: false }) }, 3000)
+				setTimeout(() => { this.setState({ isLoading: false }) }, 1000)
 				this.setState({
 					name: "",
 					address: {
