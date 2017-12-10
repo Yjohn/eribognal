@@ -49,9 +49,9 @@ const PlaceCard = props => {
                     </Grid>
                     <Grid item xs={8} style={{ paddingTop: 0 }}>
                         <p style={styles.listTitle}> {place.name} </p>
+                        <p style={styles.listDetails}> {postCode} </p>
                         <p style={styles.listAddress}>{place.category} </p>
                         <p style={styles.listDetails}> {place.description} </p>
-                        <p style={styles.listDetails}> {postCode} </p>
                     </Grid>
                 </Grid>
             </Link>
