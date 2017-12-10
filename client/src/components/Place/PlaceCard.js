@@ -35,6 +35,11 @@ const styles = ({
 
 const PlaceCard = props => {
     const place = props.place;
+    let postCode = " ";
+    if (place.address!=undefined) {   
+     postCode = place.address.postcode;
+    }
+    
     return (
         <div style={styles.cardList}>
             <Link value={place._id} style={{ textDecoration: 'none' }} to={`/places/${place._id}`} >
@@ -46,6 +51,7 @@ const PlaceCard = props => {
                         <p style={styles.listTitle}> {place.name} </p>
                         <p style={styles.listAddress}>{place.category} </p>
                         <p style={styles.listDetails}> {place.description} </p>
+                        <p style={styles.listDetails}> {postCode} </p>
                     </Grid>
                 </Grid>
             </Link>
