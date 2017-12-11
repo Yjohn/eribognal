@@ -37,11 +37,15 @@ class Questions extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({
+            isLoading: true
+        })
         apiClient.getQuestions().then(this.showQuestions);
         const answersJSON = JSON.parse(localStorage.getItem('answers'));
         if (answersJSON) {
             const savedAnswers = answersJSON;
             this.setState({
+                isLoading: false,
                 savedAnswers
             })
         }
