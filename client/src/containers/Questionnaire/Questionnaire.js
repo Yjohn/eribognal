@@ -44,10 +44,12 @@ class Questions extends React.Component {
         const answersJSON = JSON.parse(localStorage.getItem('answers'));
         if (answersJSON) {
             const savedAnswers = answersJSON;
-            this.setState({
-                isLoading: false,
-                savedAnswers
-            })
+            setTimeout(() => {
+                this.setState({
+                    isLoading: false,
+                    savedAnswers
+                })
+            }, 1000)
         }
     }
 
