@@ -102,17 +102,12 @@ class Questions extends React.Component {
                 this.setState({
                     open: true,
                     error: undefined,
-                    isLoading: true
+
                 })
                 const data = response.data;
                 localStorage.setItem("answers", JSON.stringify(data))
             })
-            .then(() => {
-                setTimeout(() => {
-                    this.setState({ isLoading: false });
-                    this.props.history.push("/");
-                }, 1000)
-            })
+
             .catch((error) => {
                 this.setState({
                     open: true,
@@ -124,7 +119,7 @@ class Questions extends React.Component {
     handleRequestCloseError = () => {
         this.setState({
             open: false,
-            isLoading: false,
+
         });
     }
 
@@ -132,7 +127,7 @@ class Questions extends React.Component {
         this.props.history.push("/")
         this.setState({
             open: false,
-            isLoading: false,
+
         });
     }
 
